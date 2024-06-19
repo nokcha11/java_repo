@@ -22,6 +22,8 @@ public class HelloJava {
 		String _test = "";
 
 		System.out.print(test1);
+		//System.out.print(test2);
+		//System.out.print(_test);
 		
 		
 		System.out.println("Hello Java 2!!!");
