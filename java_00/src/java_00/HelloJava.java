@@ -15,14 +15,14 @@ public class HelloJava {
 		
 		String test1 = "안녕하세요, 저는 000 입니다.";
 		
-		String test2 ="";
+		String test2 =""; // 안의 내용이 없어서 출력이 안되는 거임
 		
 		test2 ="나 변수야";
 		
 		String _test = "";
 
 		System.out.print(test1);
-		//System.out.print(test2);
+		//System.out.print(test2); // 출력 안하면 안나온다.
 		//System.out.print(_test);
 		
 		
