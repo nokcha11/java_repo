@@ -5,7 +5,7 @@ public class Ex01_Myintro1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		//퀴즈1
+		//퀴즈1 나의소개
 		
 		String name = "서여진";
 		String position = "대전광역시 대덕구";
