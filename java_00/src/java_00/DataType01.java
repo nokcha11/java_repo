@@ -54,11 +54,11 @@ public class DataType01 {
 		System.out.println("floatValue: " + floatValue);
 		floatValue = -128.123456f;
 		System.out.println("floatValue: " + floatValue);
-
+		
 		// 실수, (유효 자릿수) 소수 15자리
 		double doubleValue = -128.1234567890123d;
 		System.out.println("doubleValue: " + doubleValue);
-		doubleValue = -128.12345678901234d;
+		doubleValue = -128.1234;
 		System.out.println("doubleValue: " + doubleValue);
 
 		// 논리, 진실(true) 또는 거짓(false)

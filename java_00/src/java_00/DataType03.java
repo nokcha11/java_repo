@@ -92,12 +92,19 @@ public class DataType03 {
 		System.out.println("float int1 + int2 = " + (strflt1 + strflt2)); //숫자형태
 		
 		
+		
 	
 		
 		// java String을 Double로 변환
 		String str3 = "3.0";
 		System.out.println(Double.parseDouble(str3)); //3.0
-
+		
+		Double srtDob1 = Double.parseDouble(str3);
+		Double srtDob2 = 0.5678d;
+		
+		System.out.println(" string " + srtDob1 + srtDob2); // 믄자형태
+		System.out.println(" Double " + (srtDob1 + srtDob2)); // 숫자형태
+		
 		
 		
 		
