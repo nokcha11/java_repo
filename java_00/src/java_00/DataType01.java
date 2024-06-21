@@ -50,7 +50,7 @@ public class DataType01 {
 		System.out.println("longValue: " + longValue);
 
 		// 실수, (유효 자릿수) 소수 6자리
-		float floatValue = -128.12345f;
+		float floatValue = -128.12345f; // f까지 6자리라서 반올림으로 5->4
 		System.out.println("floatValue: " + floatValue);
 		floatValue = -128.123456f;
 		System.out.println("floatValue: " + floatValue);
@@ -58,7 +58,7 @@ public class DataType01 {
 		// 실수, (유효 자릿수) 소수 15자리
 		double doubleValue = -128.1234567890123d;
 		System.out.println("doubleValue: " + doubleValue);
-		doubleValue = -128.1234;
+		doubleValue = -128.1234d;
 		System.out.println("doubleValue: " + doubleValue);
 
 		// 논리, 진실(true) 또는 거짓(false)
