@@ -101,11 +101,6 @@ public class Operator01 {
 		System.out.println(numResult);
 		
 		
-		if (true && true) {
-			
-		} else if (true || false) {
-			
-		}
 		
 		
 		
