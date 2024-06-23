@@ -58,8 +58,13 @@ public class Operator2_2 {
 
 		// 숫자 입력 - 짝수인지, 아닌지를 판단
 				
-		int varNum = 10;
-		int varResult = 10;
+		int varNum = 101;
+		int varResult = varNum % 2;
+		boolean numFlag;
+		
+		numFlag = varResult == 0;
+		
+		System.out.println(varNum + " 는 짝수입니다. >>>>>> " + numFlag);
 
 		
 		
