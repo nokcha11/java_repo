@@ -26,12 +26,6 @@ public class Operator02 {
 		System.out.println();
 
 
-		// 사용자 나이 입력 - 19세 이상 통과, 미만 거절
-		// true(통과), false(거절)
-
-
-
-		// 숫자 입력 - 짝수인지, 아닌지를 판단
 		
 		
 
