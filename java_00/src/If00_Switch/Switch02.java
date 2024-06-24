@@ -1,4 +1,4 @@
-package java_00;
+package If00_Switch;
 
 import java.util.Scanner;
 
@@ -35,7 +35,7 @@ public class Switch02 {
 			break;
 			
 		default:
-			throw new IllegalArgumentException("Unexpected value: " + month);
+			System.out.println("Unexpected value: " + month);
 		}
 		
 		// 동일한 조건식을 if문으로 작성해보기
@@ -51,6 +51,8 @@ public class Switch02 {
 		} else {
 		    System.out.println(month2 + "월은31일입니다."); // 나머지 월은 31일
 		
+		    
+		    sc.close();
 		}
 	}
 

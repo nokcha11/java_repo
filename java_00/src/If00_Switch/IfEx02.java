@@ -1,4 +1,4 @@
-package java_00;
+package If00_Switch;
 
 import java.util.Scanner;
 

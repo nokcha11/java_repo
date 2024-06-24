@@ -1,4 +1,4 @@
-package java_00;
+package If00_Switch;
 
 import java.util.Scanner;
 
@@ -7,6 +7,8 @@ public class ForWhile01 {
 	public static void main(String[] args) {
 
 		// (예제) 1부터 10까지의 합을 For문으로
+		
+		Scanner sc = new Scanner(System.in);
 
 		int forTotal = 0;
 
@@ -51,6 +53,10 @@ public class ForWhile01 {
 		
 		
 		// (while) 1~200까지의 정수 중 6의 배수이면서 12의 배수는 아닌 수 출력
+		
+		
+		sc.close();
+		
 	}
 
 }
