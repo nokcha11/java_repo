@@ -77,7 +77,7 @@ public class Operator03 {
 		System.out.println();
 
 		// 복합 대입 연산 활용
-		n -= 2;
+		n2 -= 2;
 		
 		System.out.println("n2 = n2 - 2 >>> " + n2);
 		System.out.println();
