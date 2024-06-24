@@ -33,7 +33,7 @@ public class Operator2_2 {
 		
 		// 6. a와 a가 다를까요? 아니오
 		
-		System.out.println(a+ " > " + a+ " = " + (a!=a));
+		//System.out.println(a+ " > " + a+ " = " + (a!=a));
 		
 		// 7. b와 c가 다를까요? 네
 		
