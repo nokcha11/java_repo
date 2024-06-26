@@ -10,9 +10,6 @@ public class Method06 {
 	 * Scanner 객체를 메소드(함수) 내에서 사용하기 위해 사용하는 선언 방식
 	 * 해당 클래스 어디서는 Scanner 객체 사용 가능
 	 */
-	
-	// 모든곳에서 사용하게 스캐너 상위에 위치해 놓았음
-	// privatesms 한 클래스에서만 사용하고 메모리 끝
 	private static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -32,12 +29,11 @@ public class Method06 {
 		
 		 */
 
-		
-		
 		int num = 0;
 		int sum = 0;
 		
 		boolean flag = true;
+		
 		while (flag) {
 			num = getNum();
 			
@@ -48,35 +44,30 @@ public class Method06 {
 			} else {
 				System.out.println("1보다 작은 숫자는 계산할 수 없어요.");
 			}
+			
 		}
-		
 
 	}
-
+	
 	// 숫자 입력 받기 method
 	public static int getNum() {
-		
-
+	
 		System.out.println("숫자를 입력해 주세요 : ");
 		int num = sc.nextInt();
 		
 		return num;
-		
-		
 	}
 	
-	
-	
 	// 계산식 method
-		public static int sum(int num) {
-			int result = 0;
+	public static int sum(int num) {
+		int result = 0;
 		
-			for (int i=1; i<=num; i++) {
-				result = result + i;
-				//result += i;
-			}
-			
-			return result;
+		for (int i=1; i<=num; i++) {
+			result = result + i;
+			//result += i;
 		}
+		
+		return result;
+	}
 
 }
