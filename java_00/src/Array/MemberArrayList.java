@@ -5,49 +5,48 @@ import java.util.Scanner;
 
 public class MemberArrayList {
 
-    private static Scanner sc = new Scanner(System.in);
+	private static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        /**
-         * [ 요구사항 ]
-         * 
-         *  1. 회원명을 입력받아 ArrayList를 생성하시오.
-         *  2. "그만" 이라고 입력하면 프로그램 종료
-         */
+	public static void main(String[] args) {
+		/**
+		 * [ 요구사항 ]
+		 * 
+		 *  1. 회원명을 입력받아 ArrayList를 생성하시오.
+		 *  2. "그만" 이라고 입력하면 프로그램 종료
+		 */
 
-        // 회원명을 입력받아 ArrayList를 생성하는 메서드 호출
-        ArrayList<String> members = inputMemberNames();
+		ArrayList<String> memberArr = memberListInsert();
+		memberListSelect(memberArr);
 
-        // 생성된 회원정보를 출력하는 메서드 호출
-        System.out.println("===== 입력된 회원명 리스트 =====");
-        printMemberNames(members);
-    }
+	}
 
-    // 회원명을 입력받아 ArrayList를 생성하는 메서드
-    public static ArrayList<String> inputMemberNames() {
-        ArrayList<String> names = new ArrayList<>();
+	// 다섯명의 회원명을 입력받아 ArrayList 생성할 method
+	public static ArrayList<String> memberListInsert() {
+		ArrayList<String> memberArr = new ArrayList<String>();
+		
+		String name = "";
+		
+		while(true) {
+			System.out.print("이름이 뭐에요 : ");
+			name = sc.next();
+			
+			if ("그만".equals(name)) {
+				break;
+			} else {
+				memberArr.add(name);
+			}
+		}
+		
+		System.out.println("=== 회원 정보 입력 완료 ===");
 
-        System.out.println("회원명을 입력하세요. 종료하려면 '그만'을 입력하세요.");
+		return memberArr;
+	}
 
-        while (true) {
-            System.out.print("회원명 입력: ");
-            String name = sc.nextLine();
-
-            if (name.equals("그만")) {
-                break;
-            }
-
-            names.add(name);
-        }
-
-        return names;
-    }
-
-    // 생성된 회원정보를 출력하는 메서드
-    public static void printMemberNames(ArrayList<String> names) {
-        for (int i = 0; i < names.size(); i++) {
-            System.out.println((i + 1) + ": " + names.get(i));
-        }
-    }
+	// 생성된 회원정보를 출력하는 method
+	public static void memberListSelect(ArrayList<String> args) {
+		for (int i=0; i<args.size(); i++) {
+			System.out.println("[ 회원 " + (i+1) + " ] 이름 : " + args.get(i));
+		}
+	}
 
 }
