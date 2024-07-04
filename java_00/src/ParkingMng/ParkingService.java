@@ -105,26 +105,33 @@ public class ParkingService {
 	}
 
 	public void outParking() {
-		// parkingSpace -> selectParking로 변경
-		String[][] parkingSpace = parkingDAO.selectParking();
+//		// parkingSpace -> selectParking로 변경
+//		String[][] parkingSpace = parkingDAO.selectParking();
 
 		System.out.print("주차 위치를 입력해 주세요. : ");
 		String locationStr = sc.next();
 
-
-		//				if (locationStr.equals(parkingSpace[i][j])) {
-		//					// parkingSpace[i][j] = null;
-		parkingDAO.deleteParking(locationStr);
-		System.out.println("출차 완료!! 안녕히 가세요.");
+		boolean flag = parkingDAO.deleteParking(locationStr);
+		
+		
+		System.out.println(">>>>>>>>>" + flag);
+		
+		// 비교 새상의 데이터 타입이 boolean(true 혹은 false)일 경우,
+		// if (flag == true) 구문 ==> if (flag)와 동일하게 사용 가능
+		// if (flag == false) 구문 ==> if (!flag)와 동일하게 사용 가능
+		
+		if (flag) {
+			System.out.println("출차 완료!! 안녕히 계세요.");
+		} else {
+			System.out.println("주차된 차량이 없습니다 !! 안녕히 계세요. ");
+			
+		}
 
 
 	}
 
 
-	//if (count == parkingDAO.ROW * parkingDAO.COL) {
-	//	System.out.println("차량이 존재하지 않습니다.");
-	//	System.out.println("차량 번호 확인 후 다시 시도해 주세요.");
-	//}
+	
 
 
 }
