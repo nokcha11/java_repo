@@ -98,14 +98,15 @@ public class ForYouServiceImpl implements ForYouService {
 		System.out.println("2. 마음의 준비가 되었다면 이름을 입력해 주세요.");
 		System.out.println("3. 엔터를 누르는 순간 궁금해 하던 답이 나옵니다.");
 		System.out.print("이 름 >> ");
-
+		String name = sc.next();
+		
 		System.out.println();
 
 		// 고민해결책의 답 가져오기
 		String result = forYouDAO.selectBook("fortune");
 
 
-		System.out.println("님이 고르신 행운의 포춘쿠키 입니다.");
+		System.out.println(name + "님이 고르신 행운의 포춘쿠키 입니다.");
 		System.out.println("-------------------------");
 
 		// 상세 로직 구현
