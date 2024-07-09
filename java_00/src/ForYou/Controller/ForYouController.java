@@ -14,7 +14,7 @@ public class ForYouController {
 		
 	ForYouServiceImpl forYouService = new ForYouServiceImpl();
 		
-		forYouService.programStart();;
+		forYouService.programStart();
 
 	}
 }
