@@ -1,5 +1,6 @@
 package ForYou.service;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import ForYou.dao.ForYouDAO;
@@ -21,17 +22,45 @@ public class ForYouServiceImpl implements ForYouService {
 
 	// 시작 메서드
 	public void programStart() {
-		System.out.println("**************************************");
-		System.out.println("    원하는 메뉴를 선택해 주세요. ");
-		System.out.println("**************************************");
-		System.out.println();
-
 		// 메뉴 출력 및 선택
+		while (true) {
+			int choice = displayMenu();
+			
+			switch (choice) {
+			case 1:
+				// 1. 마법의 고민 해결책
+				solutionBook();
+				break;
+			case 2:
+				// 2. 행운의 포춘쿠키
+				fortuneBook();
+				break;
+			case 3:
+				// 0. 프로그램 종료
+				System.out.println("프로그램이 종료됩니다.");
+				return;
+
+			default:
+				System.out.println("메뉴를 잘못 입력하셨습니다.");
+				System.out.println("다시 선택해 주세요.");
+				break;
+			}
+			
+			
+			System.out.println("**************************************");
+			System.out.println("    원하는 메뉴를 선택해 주세요. ");
+			System.out.println("**************************************");
+			System.out.println();
+		}
+
 
 	}
 
 	// 메뉴를 출력하고 작업 번호를 입력 받아 반환하는 메서드
 	public int displayMenu() {
+		
+		int choice = 0;
+		
 		System.out.println();
 		System.out.println("------------------------");
 		System.out.println(" 1. 마법의 고민 해결책");
@@ -40,7 +69,9 @@ public class ForYouServiceImpl implements ForYouService {
 		System.out.println("------------------------");
 		System.out.print("선택 >> ");
 
-		return sc.nextInt();
+		choice = sc.nextInt();
+		
+		return choice;
 	}
 
 	// 마법의 고민해결책
@@ -75,15 +106,22 @@ public class ForYouServiceImpl implements ForYouService {
 		System.out.println("3. 엔터를 누르는 순간 궁금해 하던 답이 나옵니다.");
 		System.out.print("이 름 >> ");
 
+		String name = sc.next();
+		
 		System.out.println();
 
 		// 고민해결책의 답 가져오기
-
+		 ArrayList<String> solBook = forYouDAO.selectSolutionBook();
+		 
+		 int selectPage = (int) (Math.random() * solBook.size());
+		 
+		 String result = solBook.get(selectPage);
 
 		System.out.println("님이 고르신 행운의 포춘쿠키 입니다.");
 		System.out.println("-------------------------");
 
 		// 상세 로직 구현
+		System.out.println("[ 고민해결 ]" + result);
 
 		System.out.println("-------------------------");
 	}
