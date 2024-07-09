@@ -72,5 +72,13 @@ public class ForYouDAO {
 		fortuneBook.add("좋아하는 것을 늘려보세요. 그만큼 즐거움이 늘어날 거에요.");
 
 	}
+	
+	public ArrayList<String> selectSolutionBook() {
+		return solutionBook;
+	}
+	
+	public ArrayList<String> selectFortuneBook() {
+		return fortuneBook;
+	}
 
 }
